@@ -1,0 +1,587 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*  COLORS   */
+/*  Background  */
+/*  Main (purple)   */
+/*  Accent (blue)   */
+/*  Text (white/off-white)  */
+body {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-group .btn-left {
+  justify-self: flex-start;
+}
+
+.btn-group .btn-right {
+  justify-self: flex-end;
+}
+
+.btn-group .btn-empty {
+  visibility: hidden;
+}
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.375em 0.625em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.btn:hover, .btn:focus {
+  background-color: transparent;
+}
+
+.btn-round {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.btn-primary {
+  background-color: #6868ca;
+  color: #f7f7f7;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  border-color: #6868ca;
+  color: #6868ca;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #f7f7f7;
+}
+
+.header-main {
+  background-color: #242526;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+}
+
+.header-main > .search,
+.header-main > .profile-interactions {
+  width: 20%;
+}
+
+.header-main > .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 5px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  height: 100%;
+}
+
+.header-main > .search > a {
+  display: block;
+  height: 75%;
+}
+
+.header-main > .search > a > img {
+  height: 100%;
+}
+
+.header-main > .search > form {
+  height: 100%;
+  width: 100%;
+}
+
+.header-main > .search > form > input {
+  width: 100%;
+  height: 100%;
+  background-color: #3a3b3c;
+  padding: 0 20px;
+  color: #f7f7f7;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+}
+
+.header-main > .search > form > input::-webkit-input-placeholder {
+  color: #b8bbbf;
+}
+
+.header-main > .search > form > input:-ms-input-placeholder {
+  color: #b8bbbf;
+}
+
+.header-main > .search > form > input::-ms-input-placeholder {
+  color: #b8bbbf;
+}
+
+.header-main > .search > form > input::placeholder {
+  color: #b8bbbf;
+}
+
+.header-main > .tabs {
+  width: 60%;
+  height: 100%;
+}
+
+.header-main > .tabs > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header-main > .tabs > ul > li {
+  list-style: none;
+  width: 20%;
+  height: 100%;
+  position: relative;
+  padding: 5px;
+  padding-bottom: 0;
+}
+
+.header-main > .tabs > ul > li a {
+  color: #b8bbbf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+  border-bottom: 2px solid transparent;
+  border-radius: 7.5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header-main > .tabs > ul > li a.active {
+  pointer-events: none;
+  border-radius: 0;
+  color: #6868ca;
+  border-color: #6868ca;
+}
+
+.header-main > .tabs > ul > li a:hover {
+  background-color: #3a3b3c;
+}
+
+.header-main > .tabs > ul > li a:hover + span {
+  opacity: 0.7;
+}
+
+.header-main > .tabs > ul > li > span {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.25em 0.5em;
+  pointer-events: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #f7f7f7;
+  color: #000;
+  font-weight: 500;
+  opacity: 0;
+  border-radius: 7.5px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.header-main > .profile-interactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  height: 100%;
+}
+
+.header-main > .profile-interactions > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  margin: 0;
+  margin-left: auto;
+}
+
+.header-main > .profile-interactions > ul > li {
+  list-style: none;
+  height: 100%;
+}
+
+.header-main > .profile-interactions > ul > li > .btn {
+  height: 100%;
+  background-color: #3a3b3c;
+  color: #f7f7f7;
+  font-size: 1.2em;
+}
+
+.header-main > .profile-interactions > ul > li > .btn:hover {
+  background-color: #4e4f50;
+}
+
+.header-main > .profile-interactions > ul > li > .btn.profile {
+  background-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  border-radius: 30px;
+}
+
+.header-main > .profile-interactions > ul > li > .btn.profile > img {
+  height: 125%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header-main > .profile-interactions > ul > li > .btn.profile:hover {
+  background-color: #3a3b3c;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .nav-secondary,
+main .projects {
+  width: 20%;
+}
+
+main .content {
+  width: 60%;
+}
+
+.nav-secondary,
+.projects > .nav-projects {
+  padding: 5px;
+}
+
+.nav-secondary > ul,
+.projects > .nav-projects > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-secondary > ul > li,
+.projects > .nav-projects > ul > li {
+  list-style: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  max-height: 100px;
+}
+
+.nav-secondary > ul > li.hidden-info,
+.projects > .nav-projects > ul > li.hidden-info {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-secondary > ul > li > a,
+.projects > .nav-projects > ul > li > a {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 15px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #f7f7f7;
+  border-radius: 7.5px;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.nav-secondary > ul > li > a > img,
+.nav-secondary > ul > li > a > i,
+.projects > .nav-projects > ul > li > a > img,
+.projects > .nav-projects > ul > li > a > i {
+  height: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.nav-secondary > ul > li > a > img,
+.projects > .nav-projects > ul > li > a > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.nav-secondary > ul > li > a > i,
+.projects > .nav-projects > ul > li > a > i {
+  color: #8691e2;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+}
+
+.nav-secondary > ul > li > a.more i,
+.projects > .nav-projects > ul > li > a.more i {
+  background-color: #3a3b3c;
+  color: #f7f7f7;
+  font-size: 1em;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.nav-secondary > ul > li > a.more.rotated i,
+.projects > .nav-projects > ul > li > a.more.rotated i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.nav-secondary > ul > li > a:hover,
+.projects > .nav-projects > ul > li > a:hover {
+  background-color: #3a3b3c;
+}
+
+.nav-secondary > ul > li > a:hover.more i,
+.projects > .nav-projects > ul > li > a:hover.more i {
+  background-color: #4e4f50;
+}
+
+.nav-secondary .break-line,
+.projects > .nav-projects .break-line {
+  display: block;
+  width: 95%;
+  height: 2px;
+  background-color: #3a3b3c;
+  margin: 10px;
+  pointer-events: none;
+}
+
+.projects {
+  padding-top: 10px;
+}
+
+.projects .break-line {
+  display: block;
+  width: 95%;
+  height: 2px;
+  background-color: #3a3b3c;
+  margin: 10px;
+  pointer-events: none;
+}
+
+.projects > header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+  color: #b8bbbf;
+}
+
+.projects > header .title {
+  font-size: 1rem;
+}
+
+.projects > header .filtering {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 10px);
+  position: relative;
+}
+
+.projects > header .filtering .filter {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #b8bbbf;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.projects > header .filtering .filter .description {
+  pointer-events: none;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5em);
+  background-color: #b8bbbf;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  opacity: 0.8;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.projects > header .filtering .filter.active {
+  color: #8691e2;
+  border-bottom: 2px solid #8691e2;
+  pointer-events: none;
+}
+
+.projects > header .filtering .filter:hover {
+  background-color: #3a3b3c;
+}
+
+.projects > header .filtering .filter:hover > .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects .nav-projects {
+  padding-left: 0;
+}
+
+.d-none {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

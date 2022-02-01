@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo_New_Symbol_Only.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/main_nav.js" defer></script>
+    <script src="js/secondary_nav.js" defer></script>
+    <script src="js/project_navigation.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-main header-dark">
+            <section class="search">
+                <a href="#" class="logo"><img src="img/Logo_New_Symbol_Only.png" alt="DevCom Logo"></a>
+                <form action="#">
+                    <input type="search" name="search_field" id="search_field" placeholder="Search DevCom">
+                </form>
+            </section>
+            <nav class="nav nav-main tabs">
+                <ul>
+                    <li>
+                        <a href="#" class="active"><i class="fas fa-home"></i></a>
+                        <span class="info-on-hover">Dashboard</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-network-wired"></i></a>
+                        <span class="info-on-hover">Projects</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-briefcase"></i></a>
+                        <span class="info-on-hover">Jobs</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-tasks"></i></a>
+                        <span class="info-on-hover">Task Manager</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-book"></i></a>
+                        <span class="info-on-hover">Journals</span>
+                    </li>
+                </ul>
+            </nav>
+            <section class="profile-interactions">
+                <ul>
+                    <li><button class="btn profile">
+                        <img src="img/man2.jpg" alt="Profile picture">
+                        <span class="first-name">Matthew</span>
+                    </button></li>
+                    <li><button class="btn btn-round"><i class="fas fa-sms"></i></button></li>
+                    <li><button class="btn btn-round"><i class="fas fa-bell"></i></button></li>
+                    <li><button class="btn btn-round"><i class="fas fa-sort-down"></i></button></li>
+                </ul>
+            </section>
+        </header>
+        <main>
+            <nav class="nav nav-dark nav-secondary">
+                <ul>
+                    <li><a href="#" class="profile"><img src="img/man2.jpg" alt="Profile picture"><span>Matthew Kaye</span></a></li>
+                    <li><a href="#" class="nav-element"><i class="fas fa-network-wired"></i><span>Projects</span></a></li>
+                    <li><a href="#" class="nav-element"><i class="fas fa-briefcase"></i><span>Jobs</span></a></li>
+                    <li><a href="#" class="nav-element"><i class="fas fa-tasks"></i><span>Task Manager</span></a></li>
+                    <li><a href="#" class="nav-element"><i class="fas fa-book"></i><span>Journals</span></a></li>
+                    <li><a href="#" class="nav-element"><i class="fas fa-user-friends"></i><span>Collaborators</span></a></li>
+                    <li class="hidden-info"><a href="#" class="nav-element"><i class="fas fa-user-friends"></i><span>Collaborators</span></a></li>
+                    <li class="hidden-info"><a href="#" class="nav-element"><i class="fas fa-user-friends"></i><span>Collaborators</span></a></li>
+                    <li class="hidden-info"><a href="#" class="nav-element"><i class="fas fa-user-friends"></i><span>Collaborators</span></a></li>
+                    <li class="hidden-info"><a href="#" class="nav-element"><i class="fas fa-user-friends"></i><span>Collaborators</span></a></li>
+                    <li><a href="#" class="more"><i class="fas fa-chevron-down"></i><span class="see-more">See more</span><span class="see-less d-none">See less</span></a></li>
+                </ul>
+                <div class="break-line"></div>
+            </nav>
+            <section class="content"></section>
+            <section class="projects">
+                <header>
+                    <span class="title">Projects</span>
+                    <div class="filtering">
+                        <button class="filter filter-all active"><i class="fas fa-border-all"></i><span class="description">All</span></button>
+                        <button class="filter filter-active"><i class="fas fa-chart-line"></i><span class="description">Active</span></button>
+                        <button class="filter filter-pending"><i class="fas fa-pause-circle"></i><span class="description">Pending</span></button>
+                        <button class="filter filter-completed"><i class="fas fa-check"></i><span class="description">Completed</span></button>
+                    </div>
+                </header>
+                <div class="break-line"></div>
+                <nav class="nav nav-dark nav-projects">
+                    <ul>
+                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                        <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending projecte</span></a></li>
+                        <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending project</span></a></li>
+                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                        <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending project</span></a></li>
+                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
