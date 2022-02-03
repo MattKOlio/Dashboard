@@ -169,6 +169,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 999;
 }
 
 .header-main > .search,
@@ -241,6 +245,7 @@ body {
   width: 60%;
   height: 100%;
   margin: 0 auto;
+  padding: 0;
 }
 
 .header-main > .tabs > ul > li {
@@ -369,6 +374,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 main .nav-secondary,
@@ -378,6 +384,36 @@ main .projects {
 
 main .content {
   width: 60%;
+}
+
+.nav-secondary,
+.projects {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 65px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+}
+
+.nav-secondary::-webkit-scrollbar,
+.projects::-webkit-scrollbar {
+  width: 20px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  visibility: hidden;
+}
+
+.nav-secondary::-webkit-scrollbar-thumb,
+.projects::-webkit-scrollbar-thumb {
+  background-color: #666768;
+  border-radius: 40px;
+  width: 10px;
+}
+
+.projects:hover .projects::-webkit-scrollbar {
+  visibility: visible;
 }
 
 .nav-secondary,
@@ -492,8 +528,176 @@ main .content {
   pointer-events: none;
 }
 
+.content .cards {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.content .cards .card {
+  background-color: #242526;
+  border-radius: 7.5px;
+}
+
+.content .cards .card:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.content .cards .card header {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.content .cards .card header img,
+.content .cards .card header button {
+  width: 10%;
+}
+
+.content .cards .card header img {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content .cards .card header .profile-info {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .cards .card header .profile-info a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.content .cards .card header .profile-info a:hover {
+  text-decoration: underline;
+}
+
+.content .cards .card header .profile-info span {
+  color: #b8bbbf;
+  font-size: 1.2em;
+}
+
+.content .cards .card header button {
+  background-color: transparent;
+  color: #b8bbbf;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.content .cards .card header button:hover {
+  background-color: #3a3b3c;
+}
+
+.content .cards .card .body {
+  width: 100%;
+}
+
+.content .cards .card .body .post-text {
+  padding: 15px;
+  padding-top: 0;
+  font-weight: 500;
+}
+
+.content .cards .card .body .post-text a {
+  display: inline-block;
+  text-decoration: none;
+  color: #8691e2;
+  font-weight: 500;
+}
+
+.content .cards .card .body .post-text a:hover {
+  text-decoration: underline;
+}
+
+.content .cards .card .body .post-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content .cards .card footer {
+  padding: 15px;
+}
+
+.content .cards .card footer .info {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b8bbbf;
+}
+
+.content .cards .card footer .info .likes:hover,
+.content .cards .card footer .info .comments:hover {
+  text-decoration: underline;
+}
+
+.content .cards .card footer .line-break {
+  width: 100%;
+  height: 2px;
+  background-color: #4e4f50;
+  margin: 15px 0;
+}
+
+.content .cards .card footer .interactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .cards .card footer .interactions button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 33%;
+  padding: 10px;
+  background-color: transparent;
+  color: #b8bbbf;
+  border: none;
+  border-radius: 7.5px;
+  outline: none;
+  font-size: 1.5em;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.content .cards .card footer .interactions button:hover {
+  background-color: #3a3b3c;
+}
+
 .projects {
   padding-top: 10px;
+  overflow-y: auto;
 }
 
 .projects .break-line {
