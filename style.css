@@ -233,6 +233,16 @@ body {
   color: #b8bbbf;
 }
 
+.header-main > .search > form button {
+  display: none;
+  color: #f7f7f7;
+  background-color: #3a3b3c;
+}
+
+.header-main > .search > form button:hover {
+  background-color: #4e4f50;
+}
+
 .header-main > .tabs {
   width: 60%;
   height: 100%;
@@ -255,6 +265,10 @@ body {
   position: relative;
   padding: 5px;
   padding-bottom: 0;
+}
+
+.header-main > .tabs > ul > li:last-child {
+  display: none;
 }
 
 .header-main > .tabs > ul > li a {
@@ -318,6 +332,7 @@ body {
   display: flex;
   padding: 10px;
   height: 100%;
+  margin-right: 10px;
 }
 
 .header-main > .profile-interactions > ul {
@@ -370,11 +385,52 @@ body {
   background-color: #3a3b3c;
 }
 
+@media only screen and (max-width: 1024px) {
+  .search input {
+    display: none;
+  }
+  .search button {
+    display: inline-block !important;
+  }
+  .tabs ul {
+    width: 90% !important;
+  }
+  .tabs ul li:nth-child(5) {
+    display: none;
+  }
+  .tabs ul li:last-child {
+    display: inline-block !important;
+  }
+  .profile-interactions ul li:first-child {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tabs {
+    width: 45% !important;
+  }
+  .tabs ul {
+    width: 100% !important;
+  }
+  .tabs ul li:not(:last-child) {
+    display: none;
+  }
+  .tabs ul li:last-child {
+    display: inline-block !important;
+  }
+  .profile-interactions ul li:first-child {
+    display: none;
+  }
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 main .nav-secondary,
@@ -384,6 +440,35 @@ main .projects {
 
 main .content {
   width: 60%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-secondary {
+    display: none;
+  }
+  .content {
+    width: 70% !important;
+  }
+  .content .cards {
+    width: 90% !important;
+  }
+  .projects {
+    width: 30% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 80% !important;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  .content .cards {
+    width: 100% !important;
+  }
+  .projects {
+    display: none;
+  }
 }
 
 .nav-secondary,
@@ -549,16 +634,17 @@ main .content {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  height: 100px;
 }
 
 .content .cards .card header img,
 .content .cards .card header button {
-  width: 10%;
+  height: 100%;
+  aspect-ratio: 1;
 }
 
 .content .cards .card header img {
   border-radius: 50%;
-  aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
 }
