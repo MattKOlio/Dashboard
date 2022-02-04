@@ -214,35 +214,99 @@
                     </article>
                 </div>
             </section>
-            <section class="projects">
-                <header>
-                    <span class="title">Projects</span>
-                    <div class="filtering">
-                        <button class="filter filter-all active"><i class="fas fa-border-all"></i><span class="description">All</span></button>
-                        <button class="filter filter-active"><i class="fas fa-chart-line"></i><span class="description">Active</span></button>
-                        <button class="filter filter-pending"><i class="fas fa-pause-circle"></i><span class="description">Pending</span></button>
-                        <button class="filter filter-completed"><i class="fas fa-check"></i><span class="description">Completed</span></button>
-                    </div>
-                </header>
-                <div class="break-line"></div>
-                <nav class="nav nav-dark nav-projects">
-                    <ul>
-                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
-                        <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending projecte</span></a></li>
-                        <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending project</span></a></li>
-                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
-                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
-                        <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending project</span></a></li>
-                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
-                        <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
-                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
-                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
-                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
-                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
-                        <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
-                        
-                    </ul>
-                </nav>
+            <section class="overview">
+                <div class="overview-tabs">
+                    <button class="overview-tab" data-target="projects">Projects</button>
+                    <button class="overview-tab" data-target="journals">Journals</button>
+                    <button class="overview-tab active" data-target="tasks">Tasks</button>
+                </div>
+                <section class="overview-panel projects">
+                    <header>
+                        <div class="filtering">
+                            <button class="filter filter-all active"><i class="fas fa-border-all"></i><span class="description">All</span></button>
+                            <button class="filter filter-active"><i class="fas fa-chart-line"></i><span class="description">Active</span></button>
+                            <button class="filter filter-pending"><i class="fas fa-pause-circle"></i><span class="description">Pending</span></button>
+                            <button class="filter filter-completed"><i class="fas fa-check"></i><span class="description">Completed</span></button>
+                        </div>
+                    </header>
+                    <div class="break-line"></div>
+                    <nav class="nav nav-dark nav-overview nav-projects">
+                        <ul>
+                            <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                            <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending projecte</span></a></li>
+                            <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending project</span></a></li>
+                            <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                            <li><a href="#" class="profile project-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending project</span></a></li>
+                            <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                            <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active project</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed project</span></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                <section class="overview-panel journals">
+                    <header>
+                        <div class="filtering">
+                            <button class="filter filter-all active"><i class="fas fa-border-all"></i><span class="description">All</span></button>
+                            <button class="filter filter-active"><i class="fas fa-chart-line"></i><span class="description">Active</span></button>
+                            <button class="filter filter-pending"><i class="fas fa-pause-circle"></i><span class="description">Pending</span></button>
+                            <button class="filter filter-completed"><i class="fas fa-check"></i><span class="description">Completed</span></button>
+                        </div>
+                    </header>
+                    <div class="break-line"></div>
+                    <nav class="nav nav-dark nav-overview nav-journals">
+                        <ul>
+                            <li><a href="#" class="profile journal-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active journal</span></a></li>
+                            <li><a href="#" class="profile journal-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending journal</span></a></li>
+                            <li><a href="#" class="profile journal-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending journal</span></a></li>
+                            <li><a href="#" class="profile journal-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active journal</span></a></li>
+                            <li><a href="#" class="profile journal-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed journal</span></a></li>
+                            <li><a href="#" class="profile journal-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending journal</span></a></li>
+                            <li><a href="#" class="profile journal-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active journal</span></a></li>
+                            <li><a href="#" class="profile journal-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active journal</span></a></li>
+                            <li><a href="#" class="profile journal-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed journal</span></a></li>
+                            <li><a href="#" class="profile journal-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed journal</span></a></li>
+                            <li><a href="#" class="profile journal-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed journal</span></a></li>
+                            <li><a href="#" class="profile journal-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed journal</span></a></li>
+                            <li><a href="#" class="profile journal-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed journal</span></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                <section class="overview-panel tasks active">
+                    <header>
+                        <div class="filtering">
+                            <button class="filter filter-all active"><i class="fas fa-border-all"></i><span class="description">All</span></button>
+                            <button class="filter filter-active"><i class="fas fa-chart-line"></i><span class="description">Active</span></button>
+                            <button class="filter filter-pending"><i class="fas fa-pause-circle"></i><span class="description">Pending</span></button>
+                            <button class="filter filter-completed"><i class="fas fa-check"></i><span class="description">Completed</span></button>
+                        </div>
+                    </header>
+                    <div class="break-line"></div>
+                    <nav class="nav nav-dark nav-overview nav-tasks">
+                        <ul>
+                            <li><a href="#" class="profile task-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active task</span></a></li>
+                            <li><a href="#" class="profile task-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending task</span></a></li>
+                            <li><a href="#" class="profile task-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending task</span></a></li>
+                            <li><a href="#" class="profile task-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active task</span></a></li>
+                            <li><a href="#" class="profile task-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed task</span></a></li>
+                            <li><a href="#" class="profile task-pending"><img src="img/man2.jpg" alt="Profile picture"><span>Pending task</span></a></li>
+                            <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active task</span></a></li>
+                            <li><a href="#" class="profile project-active"><img src="img/man2.jpg" alt="Profile picture"><span>Active task</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed task</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed task</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed task</span></a></li>
+                            <li><a href="#" class="profile project-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed task</span></a></li>
+                            <li><a href="#" class="profile task-completed"><img src="img/man2.jpg" alt="Profile picture"><span>Completed task</span></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
             </section>
         </main>
     </div>
